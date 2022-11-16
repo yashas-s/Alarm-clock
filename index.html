@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link of css file -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- fav-icon -->
+    <link rel="shortcut icon" href="./assets/fav.ico" type="image/x-icon" />
+    <title>Alarm Clock</title>
+  </head>
+  <body>
+    <!-- Alarm clock div -->
+    <main>
+      <h1>Alarm Clock</h1>
+      <!-- to show the current time -->
+      <p class="timer"></p>
+      <!-- adding inputs -->
+      <form action="">
+        <div class="input-box">
+          <!-- input for hours -->
+          <input
+            type="number"
+            max="12"
+            min="1"
+            id="hours"
+            required
+            value="00"
+          />
+          <!-- input for minutes -->
+          <input
+            type="number"
+            max="59"
+            min="0"
+            id="minutes"
+            required
+            value="00"
+          />
+          <!-- input for seconds -->
+          <input
+            type="number"
+            max="59"
+            min="0"
+            id="seconds"
+            required
+            value="00"
+          />
+          <!-- input of zone -->
+          <select id="zone" name="timeZone">
+            <option value="am">am</option>
+            <option value="pm">pm</option>
+          </select>
+        </div>
+        <!-- buttons -->
+        <div class="button-container">
+          <button type="submit" id="setAlarm">Set Alarm</button>
+          <button type="button" id="stop">Stop</button>
+        </div>
+      </form>
+      <!-- containers for rendering alarms -->
+      <h1>Alarms</h1>
+      <div class="container"></div>
+    </main>
+    <!-- Ion Icons file -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- link of index.js file -->
+    <script src="./index.js"></script>
+  </body>
+</html>
